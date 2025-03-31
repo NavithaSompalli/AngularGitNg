@@ -1,0 +1,44 @@
+<div class="ekart--product--container">
+    <!-- <img [src]="product.pImage">
+    <p>Name: {{ product.name }}</p>
+    <p>Price: {{ '$' + product.price }}</p>
+    <p>Color: {{product.color}}</p>
+    <p>Discounted Price: {{ getDiscountedPrice().toFixed(2) }}</p>
+    <p>{{product.inStock > 0 ? 'Only' + product.inStock +' items left': 'Not in Stock'}}</p>
+    <button (click)="decrementCartValue()">-</button>
+    <span>{{ addToCart }}</span>
+    <button (click)="incrementCartValue()">+</button>
+    <input (input)="onNameChange($event)"><br>
+    <p>name={{name}}</p> -->
+    <app-search></app-search>
+    <input type="text" placeholder="FirstName" #inputEl> <!--Template refrence variable #inputEl-->
+    <br><br>
+    <input type="text" placeholder="LastName" #inputEl>
+
+    <button (click) = "show()">Show full Name</button>
+    <p [ngStyle] = "{'font-weight': 'bold', 'color':'green'}">{{fullname}}</p>
+    <ng-container *ngIf = "toggle; else toggleOff">
+        <a> The toggle is on.</a>
+    </ng-container>
+    <ng-template #toggleOff>
+        <a>The toggle is off.</a>
+    </ng-template>
+    <button (click) = "onToggle()">Toggle</button>
+    <ng-content></ng-content>
+    <ul>
+        <li *ngFor="let num of numbers">
+          <div [ngClass]="getClass(num)">{{ num }}</div>
+        </li>
+      </ul>
+
+
+      <ul>
+        <li *ngFor="let num of numbers">
+          <div [ngClass]="{ primary: num <= 50, secondary: num > 50 }">
+            {{ num }}
+          </div>
+        </li>
+      </ul>
+</div>
+
+<!--Disabled, Hidden, Checked-->

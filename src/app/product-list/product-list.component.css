@@ -1,0 +1,19 @@
+.ekart--product--container{
+    padding: 10px 30px;
+}
+button{
+    padding: 5px 10px;
+    margin: 0px 5px;
+}
+
+
+.primary{
+    color:green;
+    font-weight:bold;
+}
+
+
+.secondary{
+    color:red;
+    font-weight: bold;
+}
